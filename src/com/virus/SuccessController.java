@@ -9,10 +9,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * Created by 강희룡
- * 2015-11-29
- */
 public class SuccessController {
     @FXML
     private Parent root;
@@ -24,7 +20,7 @@ public class SuccessController {
 
         stage.setScene(scene);
         stage.setResizable(true);
-        stage.setTitle("Pikicast");
+        stage.setTitle("Ransomware");
         stage.show();
     }
 }

@@ -6,13 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.virus.SuccessController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.virus.SuccessController">
    <children>
-      <Label layoutX="231.0" layoutY="39.0" text="감사합니다!">
+      <Label layoutX="141.0" layoutY="90.0" text="복호화되었습니다!">
           <font>
               <Font size="26.0" />
           </font>
       </Label>
-      <Label layoutX="83.0" layoutY="110.0" text="당신의 소중한 자산은 미래의 보안 기술과 산업에 크게 기여되어 이 세상을 &#10;더 좋은 세상으로 바꾸게 되는 계기의 일부분이 될 것입니다. 당신의 돈이 없어 &#10;부족한 보안을 가진 세상을 생각해 보세요. 정말 끔찍하지 않나요? 인류는 당신이 &#10;필요했었습니다. 그리고 당신은 우리의 부탁에 동의해주었고 그 돈보다 더 큰 &#10;가치를 가진 기여를 해 주었습니다. 이것은 전세계 인류의 도약의 작은 한걸음에 &#10;불과 합니다. 아직 당신의 기여가 이 세상에 얼마나 큰 도움을 가져올지 모르겠나요? &#10;상상해 보세요. 만약 당신이 우리의 제안을 거부했더라면 미래의 보안 기술이 &#10;어떻게 되겠습니까 ? 온세상이 혼돈일 것입니다.그리고 가장 중요한 것은&#10;당신의 소중한 100 달러가 없었더라면 우리는 치킨을 못 먹을 뻔 했습니다. &#10;그런일이 있어서는 안되죠. 큰일 날 뻔 했습니다. 고마워요.&#10;아마 화가 날 수 도 있을 것 같은데 피키캐스트가 당신의 분노를 가라앉혀줄 것입니다." textAlignment="CENTER" />
-      <Button layoutX="206.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="23.0" prefWidth="190.0" text="피키캐스트 계속 하러가기" />   </children>
+     <!--<Label layoutX="83.0" layoutY="110.0" text="" textAlignment="CENTER" /> -->
+      <!--<Button layoutX="206.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="23.0" prefWidth="190.0" text="피키캐스트 계속 하러가기" />  -->   
+	 </children>
 </AnchorPane>
