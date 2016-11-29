@@ -7,7 +7,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 /**
- * Created by codertimo on 15. 11. 26..
+ * Created by codertimo on 16. 11. 19.. from kdh
  */
 
 /**
@@ -65,5 +65,12 @@ public class EncryptionController {
         System.out.println(encrypted_files.size() + "개 파일 복호화 성공");
         searchDirectory.setDecrypted();
         searchDirectory.clearFiles();
+    }
+    public void deletion() {
+        ArrayList<File> encrypted_files = searchDirectory.decryptSearch();
+        System.out.println("파일삭제 시작");
+        searchDirectory.setDecrypted();
+        CryptoUtils.delteion(encrypted_files, key);
+      
     }
 }

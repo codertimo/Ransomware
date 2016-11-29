@@ -7,11 +7,11 @@
 
 <AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.virus.PurchaseController">
    <children>
-      <Label layoutX="76.0" layoutY="39.0" text="이 사용자의 파일이 암호화 되었습니다">
+      <Label layoutX="76.0" layoutY="39.0" text="The user's files were encrypted">
          <font>
             <Font size="26.0" />
          </font></Label>
-      <Label layoutX="36.0" layoutY="103.0" text="Advanced Encryption Standard-256으로 암호화 되어 당신 혼자서는 절대로 복구할 수 없습니다.&#10;암호화된 파일을 복호화 하려면 복구 코드가 필요합니다." textAlignment="CENTER" />
+      <Label layoutX="36.0" layoutY="103.0" text="Encrypted with AES-256 can never be recovered to it by yourself.&#10;An encrypted file recovery will need a recovery code." textAlignment="CENTER" />
       <TextField fx:id="txtDecryptCode" layoutX="185.0" layoutY="189.0" onAction="#handleSubmitAction" prefHeight="23.0" prefWidth="180.0" promptText="복구 코드를 입력하세요" />
       <Button fx:id="btnSubmit" layoutX="371.0" layoutY="189.0" mnemonicParsing="false" onAction="#handleSubmitAction" text="Submit" />
       <Hyperlink fx:id="lnkPurchaseCode" layoutX="222.0" layoutY="278.0" onAction="#handleLinkAction" text="복구 코드는 어떻게 얻나요?" textAlignment="CENTER" />
